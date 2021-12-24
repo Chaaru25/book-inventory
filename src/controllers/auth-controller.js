@@ -12,6 +12,7 @@ exports.getSignup = (req, res, next) => {
 }
 
 exports.postSignup = (req, res, next) => {
+    console.log(req.body)
     res.send("Login")
 }
 
