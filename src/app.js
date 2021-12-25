@@ -46,7 +46,7 @@ app.get("/", (req, res, next) => {
 })
 
 app.use("/auth", authRoutes)
-app.use("/book", bookRoutes)
+app.use("/books", bookRoutes)
 
 console.log(process.env.DB_URL)
 

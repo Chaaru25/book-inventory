@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="/public/bootstrap.css">
+</head>
+
+<body>
+  <div class="container">
+    <%- include('../layout/navbar') %>
+    <form action="/books/add-book" method="post">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="bookname" class="form-label">Title</label>
+          <input type="text" class="form-control" id="bookname" name="title" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="imageUrl" class="form-label">Image URL</label>
+          <input type="text" class="form-control" id="imageUrl" name="imageUrl" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="price" name="price" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="stock" class="form-label">Stock</label>
+          <input type="number" class="form-control" id="stock" name="stock" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="author" class="form-label">Author Name</label>
+          <input type="text" class="form-control" id="author" name="author" placeholder="Author Name" required>
+        </div>
+
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-success">Add Book</button>
+          <a href="/books" class="btn btn-danger">Cancel</a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</body>
+
+</html>
