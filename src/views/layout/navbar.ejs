@@ -1,0 +1,19 @@
+<header>
+  <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      Book Store
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+      <a class="me-3 py-2 text-dark text-decoration-none" href="/books">Books</a>
+      <% if(!isLoggedIn) { %>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/auth/login">Login</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/auth/signup">Signup</a>
+      <% } else { %>
+        <form action="/auth/logout" method="post">
+          <button class="btn btn-link me-3 py-2 text-dark text-decoration-none" type="submit">Logout</button>
+        </form>
+      <% } %>
+    </nav>
+  </div>
+</header>
